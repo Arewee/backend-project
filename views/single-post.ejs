@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h2><a href="/">The Super App</a></h2>
+      <nav>
+        <a href="/login">Log In</a>
+      </nav>
+    </header>
+    <main>
+      <h1><%= post.title %></h1>
+      <article>
+        <small
+          >posted by <mark><%= post.username %></mark> on <%= new Date(post.createdDate).getFullYear() %>-<%= (new
+          Date(post.createdDate).getMonth()+1 ).toString().padStart(2, '0')%>-<%= new
+          Date(post.createdDate).getDate().toString().padStart(2, '0') %>
+        </small>
+
+        <div><%= post.body %></div>
+      </article>
+      <% if(isAuthor) { %>
+
+      <a href="/edit-post/<%= post.id %>" class="button">Edit Post</a>
+      <form style="display: inline" action="/delete-post/<%= post.id %>" method="POST">
+        <button>Delete Post</button>
+      </form>
+      <% } %>
+    </main>
+
+    <footer>
+      <small>&copy; The Super App</small>
+    </footer>
+  </body>
+</html>
