@@ -15,6 +15,8 @@ Fortsätt 1,47,50
 Fortsätt 1,56,46 list of posts..
 2,16,00 kan inte se andras posts
 
+2,29 - Projekt klart men inte deployat till Dreamhost.
+
 ---
 
 DEPENDENDCIES i detta project:
