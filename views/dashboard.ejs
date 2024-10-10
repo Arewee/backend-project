@@ -4,8 +4,11 @@
   <body>
     <%- include("includes/header") %>
     <main>
-      <h2>Welcome to Your dashboard</h2>
-
+      <% if (posts.length == 0) { %>
+      <h4>Hello <mark> <%= user.username %></mark>, please create your posts!</h4>
+      <% } else { %>
+      <h4>Hello <mark> <%= user.username %></mark>, here are your posts:</h4>
+      <% } %>
       <ul>
         <% posts.forEach(post => { %>
         <li>

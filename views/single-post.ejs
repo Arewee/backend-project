@@ -22,7 +22,7 @@
           Date(post.createdDate).getDate().toString().padStart(2, '0') %>
         </small>
 
-        <div><%= post.body %></div>
+        <div><%- filterUserHTML(post.body) %></div>
       </article>
       <% if(isAuthor) { %>
 
